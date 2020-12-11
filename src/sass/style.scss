@@ -1,0 +1,168 @@
+.container {
+    max-width: 1140px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+}
+
+.login-form {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+
+    &__content {
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.btn-log {
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    padding: 5px 20px;
+    background-color: green;
+    color: #fff;
+    border: none;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
+    &:hover {
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+        background-color: rgba(green, 0.8);
+    }
+}
+
+.user-all-posts {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+    }
+
+    ol {
+        padding: 0px;
+        
+        li {
+            padding-bottom: 5px;
+
+            small {
+                cursor: pointer;
+                margin: 0px 2px;
+                padding: 2px;
+                color: #fff;
+                border-radius: 3px;
+            }
+
+            .view {
+                background-color: blue;
+            }
+
+            .edit {
+                background-color: seagreen;
+            }
+
+            .delete {
+                background-color: sienna;
+            }
+        }
+    }
+
+    &__add {
+
+        &--inp {
+            padding-bottom: 20px;
+            
+            textarea {
+                min-width: 350px;
+                overflow: auto;
+                min-height: 40px;
+            }
+        }
+
+        &--sub {
+            margin-top: 20px;
+            cursor: pointer;
+            padding: 5px 20px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+
+            &:hover {
+                box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+                background-color: rgba(green, 0.8);
+            }
+        }
+    }
+}
+
+.user-single-post {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        display: block;
+    }
+
+    strong {
+        margin-right: 5px;
+    }
+
+    &__edit {
+
+        &--inp {
+            padding-bottom: 20px;
+            
+            textarea {
+                min-width: 350px;
+                overflow: auto;
+                min-height: 40px;
+            }
+        }
+
+        &--sub {
+            margin-top: 20px;
+            cursor: pointer;
+            padding: 5px 20px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+
+            &:hover {
+                box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+                background-color: rgba(green, 0.8);
+            }
+        }
+    }
+}
+
+.login-in {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+     
+    a {
+        display: inline-block;
+        background-color: red;
+        padding: 5px 15px;
+        border-radius: 5px;
+        color: #fff;
+        margin: 0 auto;
+        text-decoration: none;
+        box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.25);
+
+        &:hover {
+            box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.25);
+            background-color: rgba(red, 0.8);
+        }
+    }
+}

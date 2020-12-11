@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import axios from 'axios';
+
+import LoginForm from './pages/Login';
+import AllArticles from './pages/Articles';
+import SingleArticleView from './pages/SingleArticle(view)';
+import SingleArticleEdit from './pages/SingleArticle(edit)';
 
 function App() {
+ 
+  const [currentUser, setCurrentUser] = React.useState({});
+
+  // const handlePostClick = async (id) => {
+  //     try {
+  //         let post = await axios(`https://jsonplaceholder.typicode.com/posts/${id}`);
+  //         console.log(post);
+  //     } catch(e) {
+  //         console.log(e);
+  //     }
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Router>
+        <Switch>
+
+          <Route path="/" exact>
+            <LoginForm currentUser={currentUser} setCurrentUser={setCurrentUser} />
+          </Route>
+
+          <Route path="/articles" exact>
+            <AllArticles currentUser={currentUser} />
+          </Route>
+
+          <Route path="/articles/:id" exact>
+            <SingleArticleView currentUser={currentUser} />
+          </Route> 
+
+          <Route path="/articles/:id/edit" exact>
+            <SingleArticleEdit currentUser={currentUser} />
+          </Route> 
+
+        </Switch>
+      </Router>
     </div>
-  );
+  )
 }
 
 export default App;
